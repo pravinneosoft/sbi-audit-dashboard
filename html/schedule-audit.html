@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Schedule Audit | Internal Audit Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="dashboard">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand m-0" href="./dashboard.html">
+      <img src="./images/logo.png" alt="" class="img-fluid">
+    </a>
+    <!-- Example split danger button -->
+    <div class="user-login">
+      <p class="user-login-time mb-0">Last Logged In: 24-09-2021 11:24:55 AM</p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Mohan</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Mohan</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="./login.html">Log out</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3 dashboard-navigation">
+        <div class="d-flex flex-column">
+          <a href="./audit-create.html" class="btn btn-primary text-capitalize mt-3">Create audit plan</a>
+          <a href="./schedule-audit.html" class="btn btn-primary text-capitalize mt-3">Schedule an audit</a>
+          <a href="./prepare-audit.html" class="btn btn-primary text-capitalize mt-3">prepare an audit</a>
+          <a href="./execute-audit.html" class="btn btn-primary text-capitalize mt-3">execute an audit</a>
+          <a href="./track-findings.html" class="btn btn-primary text-capitalize mt-3">track findings</a>
+          <a href="./follow-up.html" class="btn btn-primary text-capitalize mt-3">follow up closure</a>
+        </div>
+      </div>
+      <div class="col-9">
+        <table class="table my-4">
+          <thead>
+            <tr>
+              <th scope="col">Audit Number</th>
+              <th scope="col">Status</th>
+              <th scope="col">Branch</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">End Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AU0001</td>
+              <td>Completed</td>
+              <td>Port-louis</td>
+              <td>01-Sep-2021</td>
+              <td>06-Sep-2021</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="font-weight-bold mb-4">Schedule an Audit</h2>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Activities</th>
+              <th scope="col">Auditor</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">End Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Actitvity 1</th>
+              <td>Auditor 1</td>
+              <td><input type="date"></td>
+              <td><input type="date"></td>
+              <td><input type="time"></td>
+              <td> Status 1</td>
+
+            </tr>
+            <tr>
+              <th scope="row">Actitvity 2</th>
+              <td>Auditor 2</td>
+              <td><input type="date"></td>
+              <td><input type="date"></td>
+              <td><input type="time"></td>
+              <td> Status 2</td>
+
+            </tr>
+            <tr>
+              <th scope="row">Actitvity 3</th>
+              <td>Auditor 3</td>
+              <td><input type="date"></td>
+              <td><input type="date"></td>
+              <td><input type="time"></td>
+              <td> Status 3</td>
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script>
+    var xValues = ["Jan", "feb", "march", "april", "jun"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = ["red", "green", "blue", "orange", "brown"];
+
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {
+          display: false
+        },
+        title: {
+          display: false,
+        }
+      }
+    });
+  </script>
+  <script src="./js/jquery-3.5.1.slim.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>

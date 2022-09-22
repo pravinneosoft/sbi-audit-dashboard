@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Create User | Internal Audit Management System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand m-0" href="./dashboard.html">
+      <img src="./images/logo.png" alt="" class="img-fluid">
+    </a>
+    <!-- Example split danger button -->
+    <div class="user-login">
+      <p class="user-login-time mb-0">Last Logged In: 24-09-2021 11:24:55 AM</p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Mohan</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <span class="sr-only">Mohan</span>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="./login.html">Log out</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3 dashboard-navigation">
+        <div class="d-flex flex-column">
+          <a href="./audit-create.html" class="btn btn-primary text-capitalize mt-3">Create audit plan</a>
+          <a href="./schedule-audit.html" class="btn btn-primary text-capitalize mt-3">Schedule an audit</a>
+          <a href="./prepare-audit.html" class="btn btn-primary text-capitalize mt-3">prepare an audit</a>
+          <a href="./execute-audit.html" class="btn btn-primary text-capitalize mt-3">execute an audit</a>
+          <a href="./track-findings.html" class="btn btn-primary text-capitalize mt-3">track findings</a>
+          <a href="./follow-up.html" class="btn btn-primary text-capitalize mt-3">follow up closure</a>
+        </div>
+      </div>
+      <div class="col-9">
+        <h2 class="font-weight-bold my-4">Create User</h2>
+        <form>
+          <div class="form-row">
+            <div class="col-md-5">
+              <!-- <div class="form-group">
+                <label for="userid">User Id:</label>
+                <input type="text" class="form-control" id="userid" placeholder="Enter User Id">
+              </div>  -->
+              <div class="form-group ">
+                <label for="fname">First Name: </label>
+                <input type="text" class="form-control" id="userid" placeholder="First Name">
+              </div>
+
+              <div class="form-group">
+                <label for="nic">NIC No.:</label>
+                <input type="text" class="form-control" id="nic" placeholder=" NIC No.">
+              </div>
+
+              <div class="form-group">
+                <label for="nic">Phone No.:</label>
+                <input type="tel" class="form-control" id="nic" placeholder=" Phone No.">
+              </div>
+
+              <div class="form-group">
+                <label for="nic">Email: </label>
+                <input type="email" class="form-control" id="nic" placeholder=" Email ID">
+              </div>
+
+              <div class="form-group">
+                <label for="logindate">Last Login Date: </label>
+                <input type="date" class="form-control" id="logindate">
+              </div>
+
+              <div class="form-group">
+                <label for="logindate">Date Created: </label>
+                <input type="date" class="form-control" id="createdate">
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" class="form-control" id="lname" placeholder="Last Name">
+              </div>
+              <div class="form-group">
+                <label for="address">Address: </label>
+                <input type="text" class="form-control" id="address" placeholder="Address">
+              </div>
+              <div class="form-group">
+                <label for="mob">Mobile No. :</label>
+                <input type="tel" class="form-control" id="mob" placeholder="Mobile No.">
+              </div>
+              <div class="form-group">
+                <label for="acc">Account Enabled:</label>
+                <input type="text" class="form-control" id="acc" placeholder="Account Enabled">
+              </div>
+              <div class="form-group">
+                <label for="expdate">Expiry Date</label>
+                <input type="date" class="form-control" id="expdate">
+              </div>
+            </div>
+            <div class="form-group d-flex justify-content-end w-100">
+              <a href="./create-responsibilty.html" class="btn btn-primary">Submit</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./js/jquery-3.5.1.slim.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
