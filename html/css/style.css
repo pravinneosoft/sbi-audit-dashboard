@@ -79,7 +79,6 @@ body {
   margin: 30px auto 0 auto;
 }
 .dashboard-navigation {
-  height: 100vh;
   background-color: #f8f9fa;
 }
 /* dashboard */
@@ -103,3 +102,17 @@ body {
 .my-tasks {
   min-height: 372px;
 }
+.dashboard-links{
+  display: flex;
+  flex-direction: column;
+  
+}
+@media only screen and (max-width: 767px) {
+  .dashboard-links{
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+  }}
+  .dashborad-links a{
+    flex: 0 0 33.333333%;
+    }
