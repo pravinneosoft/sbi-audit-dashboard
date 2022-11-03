@@ -14,23 +14,60 @@
         <a href="" class="sbi-logo">
             <img src="./html/images/logo.png" alt="" class="img-fluid">
         </a>
-        <form id="login-form" class="form" action="">
+        <form action="./html/dashboard.html" id="registrationForm" class="form" novalidate>
             <div class="form-group">
                 <label for="username" class="">Username:</label><br>
                 <input type="text" name="username" id="username" class="form-control">
             </div>
             <div class="form-group">
                 <label for="password" class="">Password:</label><br>
-                <input type="password" name="password" id="password" class="form-control">
+                <input type="password" class="form-control active2" id="password" required>
+                <div id="password-err"></div>
             </div>
+            
             <div class="form-group">
                 <div class="d-flex justify-content-end">
-                    <a href="" class="btn btn-danger">Forgot Password?</a>
+                    <a href="javascript:void(0)" class="btn btn-danger">Forgot Password?</a>
                 </div>
-                <a href="./html/create-user.html" class="btn btn-primary">Sign in</a>
+                
+                        <input type="submit" class="btn btn-primary ps-3 pe-3 fs-4" value="Sign In"/></div>
+           
             </div>
         </form>
     </div>
     <script src="./html/js/jquery-3.5.1.slim.min.js"></script>
     <script src="./html/js/bootstrap.bundle.min.js"></script>
+    <script>
+             var password = document.getElementById("password");;
+        var passwordValidation = function () {
+            passwordValue = password.value.trim();
+            validPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+            passwordErr = document.getElementById('password-err');
+            if (passwordValue == "") {
+                passwordErr.innerHTML = "Password is required";
+            } else if (!validPassword.test(passwordValue)) {
+                passwordErr.innerHTML =
+                    "Password must have at least one Uppercase, lowercase, digit, special characters & 8 characters";
+            } else {
+                passwordErr.innerHTML = "";
+                return true;
+            }
+        }
+        password.oninput = function () {
+            passwordValidation();
+
+        }
+        // validation on submit
+        document.getElementById("registrationForm").onsubmit = function (e) {
+            emailAddressValidation();
+            passwordValidation();
+           if (
+                emailAddressValidation() == true &&
+                passwordValidation() == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
 </body>
